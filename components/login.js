@@ -42,7 +42,11 @@ export default class Login extends React.Component{
   }
 
   login(){
-    fetch("http://10.0.2.2:1212/signin", {
+    let you_url = 'http://10.0.2.2';//Change your ip in here
+    let port = ':1212'
+    let signin = '/signin';
+    let url = you_url + port + signin;
+    fetch(url, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

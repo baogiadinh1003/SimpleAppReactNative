@@ -43,7 +43,11 @@ export default class Signup extends React.Component{
   }
 
   signup2(){
-    fetch("http://10.0.2.2:1212/signup",{
+    let you_url = 'http://10.0.2.2'; //Change your ip in here
+    let port = ':1212';
+    let sign_up = '/signup';
+    let url = you_url + port + sign_up;
+    fetch(url,{
       method:"POST",
       headers:{
         'Content-Type': 'application/json'
